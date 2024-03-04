@@ -1,4 +1,4 @@
-obj-m := simplefw.o
+obj-m := simplefw.o simplefw-bug_nullptr.o
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(shell pwd) modules
