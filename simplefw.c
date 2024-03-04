@@ -89,4 +89,5 @@ module_init(simplefw_init);
 module_exit(simplefw_exit);
 
 MODULE_AUTHOR("Andrea Mayer <andrea.mayer@uniroma2.it>");
+MODULE_DESCRIPTION("Drop ICMP packets on INET_PREROUTING");
 MODULE_LICENSE("GPL");
