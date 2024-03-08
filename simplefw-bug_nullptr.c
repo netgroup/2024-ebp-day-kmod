@@ -24,8 +24,7 @@ simplefw_nfhook_ipv4_handler(void *priv, struct sk_buff *skb,
 	iph = ip_hdr(skb);
 	proto = iph->protocol;
 	if (proto == IPPROTO_ICMP) {
-		/* to ensure that the compiler does not remove it */
-		volatile int *p = NULL;
+		unsigned int *p = NULL;
 
 		/* this is a toy module; IRL we should use something like
 		 * net_ratelimit() or net_xxx_ratelimited().
